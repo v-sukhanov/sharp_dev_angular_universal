@@ -7,8 +7,12 @@ const routes: Routes = [
 		loadChildren: () => import('./features/login/login.module').then(m => m.LoginModule),
 	},
 	{
-		path: 'news',
-		loadChildren: () => import('./features/news/news.module').then(m => m.NewsModule),
+		path: 'breweries',
+		loadChildren: () => import('./features/breweries/news.module').then(m => m.NewsModule),
+	},
+	{
+		path: '**',
+		redirectTo: 'login'
 	}
 ];
 
